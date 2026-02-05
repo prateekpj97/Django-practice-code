@@ -6,6 +6,8 @@ class Student(models.Model):
     age = models.IntegerField()
     email = models.EmailField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    image = models.ImageField(upload_to='students/')
+
 
     def __str__(self):
         return self.name
